@@ -1,0 +1,3 @@
+def Rev(x):
+    r = ''.join(list(x)[::-1])
+    return r
