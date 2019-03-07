@@ -13,9 +13,9 @@ def no_of_similar_integers(N):
         dictOccurrences = dict(Counter(listOfDigits))
         listOccurrences = list(dictOccurrences.values())
         facts = 1
-        for x in listOccurrences:
-            if x > 1:
-                facts = facts * factorial(x)
+        for noOfOccurrence in listOccurrences:
+            if noOfOccurrence > 1:
+                facts = facts * factorial(noOfOccurrence)
         noOfSimilarInts = noOfNonzeros * factorial(len(listOfDigits) - 1) / facts
         return int(noOfSimilarInts)
 
