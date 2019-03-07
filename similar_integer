@@ -1,0 +1,28 @@
+#This function finds the number of similar integers given an integer
+
+from collections import Counter
+
+def similar_integer(N):
+    if N < 0 or type(N) != int:
+        print('Number cannot be negative and must be an integer')
+    elif N == 0 and type(N) == int:
+        return 1
+    else:
+        lista = [int(digits) for digits in str(N)]
+        n_of_nonzeros = sum(elements > 0 for elements in lista)
+        dict_occurrences = dict(Counter(lista))
+        list_occurrences = list(dict_occurrences.values())
+        facts = 1
+        for x in list_occurrences:
+            if x > 1:
+                facts = facts * factorial(x)
+        similar = n_of_nonzeros * factorial(len(lista) - 1) / facts
+        return int(similar)
+
+'''This is a recursive helper function to calculate the factorial'''
+def factorial(N):
+    if N > 0:   
+        N = N * factorial(N - 1)
+    else:
+        N = 1
+    return N
