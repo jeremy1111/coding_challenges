@@ -8,15 +8,15 @@ def similar_integer(N):
     elif N == 0 and type(N) == int:
         return 1
     else:
-        listOfInts = [int(digits) for digits in str(N)]
-        noOfNonzeros = sum(elements > 0 for elements in listOfInts)
-        dictOccurrences = dict(Counter(listOfInts))
+        listOfDigits = [int(digits) for digits in str(N)]
+        noOfNonzeros = sum(elements > 0 for elements in listOfDigits)
+        dictOccurrences = dict(Counter(listOfDigits))
         listOccurrences = list(dictOccurrences.values())
         facts = 1
         for x in listOccurrences:
             if x > 1:
                 facts = facts * factorial(x)
-        noOfSimilarInts = noOfNonzeros * factorial(len(listOfInts) - 1) / facts
+        noOfSimilarInts = noOfNonzeros * factorial(len(listOfDigits) - 1) / facts
         return int(noOfSimilarInts)
 
 #This is a recursive helper function to calculate the factorial
