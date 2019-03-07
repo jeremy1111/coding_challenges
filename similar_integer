@@ -2,7 +2,7 @@
 
 from collections import Counter
 
-def similar_integer(N):
+def no_of_similar_integers(N):
     if N < 0 or type(N) != int:
         print('Number cannot be negative and must be an integer')
     elif N == 0 and type(N) == int:
