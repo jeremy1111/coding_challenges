@@ -5,7 +5,7 @@ def find_largest_sibling(N):
     if N < 0 or type(N) != int:
         print('Number cannot be negative and must be an integer')
     else:
-        lista = [int(digits) for digits in str(N)]
-        sorted_list = sorted(lista, key=int, reverse=True)
-        largest_sibling = int(''.join(str(digits) for digits in sorted_list))
-        return largest_sibling
+        listOfInts = [int(digits) for digits in str(N)]
+        sortedList = sorted(listOfInts, key=int, reverse=True)
+        largestSibling = int(''.join(str(digits) for digits in sortedList))
+        return largestSibling
