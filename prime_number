@@ -1,3 +1,5 @@
+#This function finds out if an integer is a prime number
+
 def PrimeTime(num):
     if type(num) != int or num <= 0:
         return 'number must be positive integer'
@@ -8,8 +10,8 @@ def PrimeTime(num):
     else:
         for x in range(2, num - 1):
             if num%x == 0:
-                cond = 'false'
+                isPrimeNumber = 'false'
                 break
             else:
-                cond = 'true'
-        return cond
+                isPrimeNumber = 'true'
+        return isPrimeNumber
