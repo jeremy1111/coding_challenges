@@ -1,4 +1,4 @@
-#This function finds the number of similar integers given an integer
+#This function finds the number of similar integers given an integer as parameter
 
 from collections import Counter
 
