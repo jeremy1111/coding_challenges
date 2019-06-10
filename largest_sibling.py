@@ -1,5 +1,5 @@
 #This function returns the largest sibling of an integer. For example,
-#if 3947 is given, it will return 9743.
+#if 3947 is given, it will return 9743
 
 def find_largest_sibling(N):
     if N < 0 or type(N) != int:
